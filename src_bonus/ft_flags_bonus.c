@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_flags.c                                         :+:      :+:    :+:   */
+/*   ft_flags_bonus.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yotillar <yotillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 22:18:45 by yotillar          #+#    #+#             */
-/*   Updated: 2020/10/24 18:23:19 by yotillar         ###   ########.fr       */
+/*   Updated: 2020/10/24 18:55:44 by yotillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/ft_printf.h"
+#include "../inc/ft_printf_bonus.h"
 
 void			ft_check_flags(t_data *d)
 {
-	while (d->ft[d->fi] == '0' || d->ft[d->fi] == '-')
+	while (d->ft[d->fi] == '0' || d->ft[d->fi] == '-' || d->ft[d->fi] == '+' ||
+	d->ft[d->fi] == ' ' || d->ft[d->fi] == '#')
 	{
 		if (d->ft[d->fi] == '0')
 			d->f[0] = 1;
 		if (d->ft[d->fi] == '-')
 			d->f[1] = 1;
+		if (d->ft[d->fi] == '+')
+			d->f[4] = 1;
+		if (d->ft[d->fi] == ' ')
+			d->f[5] = 1;
+		if (d->ft[d->fi] == '#')
+			d->f[6] = 1;
 		d->fi++;
 	}
 }
@@ -34,10 +41,8 @@ void			ft_check_width(t_data *d)
 	{
 		d->f[2] = va_arg(d->va, int);
 		d->fi++;
-		if (d->f[2] < 0)
-			d->f[1] = 1;
-		if (d->f[2] < 0)
-			d->f[2] *= -1;
+		d->f[1] += ((d->f[2] < 0 && d->f[1] == 0) ? 1 : 0);
+		d->f[2] *= (d->f[2] < 0 ? -1 : 1);
 	}
 	else
 	{
@@ -50,7 +55,6 @@ void			ft_check_width(t_data *d)
 			free(str);
 		}
 	}
-	(d->ft[d->fi] == '-') ? (d->f[1] = 1) : 0;
 }
 
 void			ft_check_prec(t_data *d)
@@ -84,7 +88,8 @@ int				ft_check(t_data *d)
 {
 	ft_check_initialize(d);
 	if (d->ft[d->fi] == '-' || d->ft[d->fi] == '0' || d->ft[d->fi] == '*' ||
-		d->ft[d->fi] == '.' || ft_isdigit(d->ft[d->fi]))
+		d->ft[d->fi] == '.' || d->ft[d->fi] == ' ' || d->ft[d->fi] == '+' ||
+		d->ft[d->fi] == '#' || ft_isdigit(d->ft[d->fi]))
 	{
 		ft_check_flags(d);
 		ft_check_width(d);
@@ -96,10 +101,10 @@ int				ft_check(t_data *d)
 		d->fi++;
 		return (-1);
 	}
-	if (d->fi == (int)ft_strlen(d->ft) ||
-		(d->ft[d->fi] != 'd' && d->ft[d->fi] != 'i' && d->ft[d->fi] != 'u' &&
-		d->ft[d->fi] != 'c' && d->ft[d->fi] != 's' && d->ft[d->fi] != 'p' &&
-		d->ft[d->fi] != 'x' && d->ft[d->fi] != 'X'))
+	if (d->fi == (int)ft_strlen(d->ft) || (d->ft[d->fi] != 'd' &&
+		d->ft[d->fi] != 'i' && d->ft[d->fi] != 'u' && d->ft[d->fi] != 'c'
+		&& d->ft[d->fi] != 's' && d->ft[d->fi] != 'p' && d->ft[d->fi] != 'x' &&
+		d->ft[d->fi] != 'X' && d->ft[d->fi] != 'o' && d->ft[d->fi] != 'n'))
 		return (-1);
 	return (0);
 }

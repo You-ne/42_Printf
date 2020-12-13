@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_printf_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yotillar <yotillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/01 17:36:11 by yotillar          #+#    #+#             */
-/*   Updated: 2020/10/24 18:48:26 by yotillar         ###   ########.fr       */
+/*   Updated: 2020/10/24 18:52:55 by yotillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/ft_printf.h"
+#include "../inc/ft_printf_bonus.h"
 
 void				ft_initialize_specs(t_spec *specs)
 {
@@ -30,8 +30,12 @@ void				ft_initialize_specs(t_spec *specs)
 	specs[6].ptr = &ft_x_spec;
 	specs[7].c = 'X';
 	specs[7].ptr = &ft_x_spec;
-	specs[8].c = '0';
-	specs[8].ptr = NULL;
+	specs[8].c = 'o';
+	specs[8].ptr = &ft_o_spec;
+	specs[9].c = 'n';
+	specs[9].ptr = &ft_n_spec;
+	specs[10].c = '0';
+	specs[10].ptr = NULL;
 }
 
 void				ft_end(t_data *d)

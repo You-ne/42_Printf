@@ -1,33 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_conv_no_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yotillar <yotillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/28 17:20:08 by yotillar          #+#    #+#             */
-/*   Updated: 2020/10/01 22:31:53 by yotillar         ###   ########.fr       */
+/*   Created: 2020/02/23 00:09:54 by yotillar          #+#    #+#             */
+/*   Updated: 2020/10/24 18:55:56 by yotillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "./inc/ft_printf.h"
-int	main(void)
+#include "../inc/ft_printf_bonus.h"
+
+int		ft_o_spec(t_data *d)
 {
-	int	ret;
+	unsigned int	arg;
 
-	ret = 0;
+	arg = 0;
+	if (d->spe == 'o')
+		arg = (unsigned int)va_arg(d->va, unsigned int);
+	d->s = ft_itoa_base(arg, "01234567");
+	ft_handler_num(d);
+	return (0);
+}
 
+int		ft_n_spec(t_data *d)
+{
+	int		*num_chars;
 
-	printf("\n\n///Mon Printf///\n");
-	ret = ft_printf("%#-20.10X\n", 420);
-	printf("Ret: %d\n\n", ret);
-	ret = ft_printf("%#-20.10o\n", 420);
-	printf("Ret: %d\n\n", ret);
-	printf("///Vrai Printf///\n");
-	ret = printf("%#-20.10X\n", 420);
-	printf("Ret: %d\n\n", ret);
-	ret = printf("%#-20.10o\n", 420);
-	printf("Ret: %d\n\n", ret);
+	num_chars = (int*)va_arg(d->va, int*);
+	*num_chars = d->bi + d->ret;
 	return (0);
 }

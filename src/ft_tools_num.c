@@ -6,7 +6,7 @@
 /*   By: yotillar <yotillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/30 05:55:13 by yotillar          #+#    #+#             */
-/*   Updated: 2020/09/30 05:55:15 by yotillar         ###   ########.fr       */
+/*   Updated: 2020/10/23 16:28:42 by yotillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ long		ft_max(long a, long b)
 		return (b);
 }
 
-int	ft_isdigit(int c)
+int			ft_isdigit(int c)
 {
 	if (c > 47 && c < 58)
 		return (1);

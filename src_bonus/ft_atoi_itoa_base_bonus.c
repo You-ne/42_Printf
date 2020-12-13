@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi_itoa_base.c                                :+:      :+:    :+:   */
+/*   ft_atoi_itoa_base_bonus.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yotillar <yotillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/24 17:08:01 by yotillar          #+#    #+#             */
-/*   Updated: 2020/10/24 18:58:27 by yotillar         ###   ########.fr       */
+/*   Updated: 2020/10/24 19:04:17 by yotillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/ft_printf.h"
+#include "../inc/ft_printf_bonus.h"
 
 int					ft_nlen_itoa_base(long nbr, int len)
 {

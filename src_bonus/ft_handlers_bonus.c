@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_handlers.c                                      :+:      :+:    :+:   */
+/*   ft_handlers_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yotillar <yotillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/22 19:29:41 by yotillar          #+#    #+#             */
-/*   Updated: 2020/10/24 22:31:57 by yotillar         ###   ########.fr       */
+/*   Updated: 2020/10/24 19:07:25 by yotillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/ft_printf.h"
+#include "../inc/ft_printf_bonus.h"
 
 void		ft_handler_char(t_data *d)
 {
@@ -51,6 +51,7 @@ void		ft_handler_num(t_data *d)
 	else
 	{
 		ft_sign(d, &i);
+		d->f[6] == 1 ? ft_hash(d) : 0;
 		while (d->s[++i] != '\0' && d->f[2] == 0 && d->f[3] < 0)
 			ft_buffing(d->s[i], d);
 	}

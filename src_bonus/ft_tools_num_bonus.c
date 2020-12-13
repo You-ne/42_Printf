@@ -1,29 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_buff.c                                          :+:      :+:    :+:   */
+/*   ft_tools_num_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yotillar <yotillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/01 19:02:53 by yotillar          #+#    #+#             */
-/*   Updated: 2020/10/23 16:04:04 by yotillar         ###   ########.fr       */
+/*   Created: 2020/09/30 05:55:13 by yotillar          #+#    #+#             */
+/*   Updated: 2020/10/24 19:09:44 by yotillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/ft_printf.h"
+#include "../inc/ft_printf_bonus.h"
 
-void	ft_buffing(char c, t_data *d)
+long		ft_min(long a, long b)
 {
-	d->buff[d->bi] = c;
-	d->bi++;
-	if (d->bi == 127)
-	{
-		write(1, &d->buff, 127);
-		d->ret += 127;
-		while (d->bi > 0)
-		{
-			d->buff[d->bi] = '\0';
-			d->bi--;
-		}
-	}
+	if (a <= b)
+		return (a);
+	else
+		return (b);
+}
+
+long		ft_max(long a, long b)
+{
+	if (a >= b)
+		return (a);
+	else
+		return (b);
+}
+
+int			ft_isdigit(int c)
+{
+	if (c > 47 && c < 58)
+		return (1);
+	else
+		return (0);
 }

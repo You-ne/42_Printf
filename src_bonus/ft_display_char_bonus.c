@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_display_char.c                                  :+:      :+:    :+:   */
+/*   ft_display_char_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yotillar <yotillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/23 00:41:31 by yotillar          #+#    #+#             */
-/*   Updated: 2020/10/23 15:51:43 by yotillar         ###   ########.fr       */
+/*   Updated: 2020/10/24 19:06:19 by yotillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/ft_printf.h"
+#include "../inc/ft_printf_bonus.h"
 
 void	ft_char_minus(t_data *d, size_t len)
 {

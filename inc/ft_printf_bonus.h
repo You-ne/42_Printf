@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_printf_bonus.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yotillar <yotillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/28 16:19:56 by yotillar          #+#    #+#             */
-/*   Updated: 2020/10/24 19:00:16 by yotillar         ###   ########.fr       */
+/*   Updated: 2020/10/24 19:01:42 by yotillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#ifndef FT_PRINTF_BONUS_H
+# define FT_PRINTF_BONUS_H
 
 /*
 **---------------------------------- Headers -----------------------------------
@@ -28,8 +28,8 @@
 **-------------------------------- Structure & Define --------------------------
 */
 
-# define NB_SPECS		8
-# define NB_FLAGS		4
+# define NB_SPECS		10
+# define NB_FLAGS		7
 
 typedef	struct	s_spec
 {

@@ -1,0 +1,4 @@
+Test 4217 (bonus_n_format_only_w_star) : FAILED.
+    First line of code: {return test("pft%*.ntest%d", 5, &n, 123); (void)n;}
+    Timed out
+

@@ -39,8 +39,6 @@ void	ft_char_width(t_data *d, size_t len)
 	int	i;
 
 	i = 0;
-	if (!d->s && (d->f[3] > 5 || d->f[3] == -1))
-		len = 6;
 	if (d->f[1] == 1)
 		ft_char_minus(d, len);
 	else

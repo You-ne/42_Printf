@@ -30,7 +30,7 @@ int				ft_c_spec(t_data *d)
 int				ft_s_spec(t_data *d)
 {
 	d->s = va_arg(d->va, char*);
-	if (!d->s && (d->f[3] > 5 || d->f[3] == -1))
+	if (!d->s)
 		d->s = ft_strdup("(null)");
 	ft_handler_char(d);
 	return (0);

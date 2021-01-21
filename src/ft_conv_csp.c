@@ -6,7 +6,7 @@
 /*   By: yotillar <yotillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/22 21:25:09 by yotillar          #+#    #+#             */
-/*   Updated: 2020/10/24 17:17:44 by yotillar         ###   ########.fr       */
+/*   Updated: 2021/01/20 21:58:39 by yotillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int				ft_c_spec(t_data *d)
 int				ft_s_spec(t_data *d)
 {
 	d->s = va_arg(d->va, char*);
-	if (!d->s && (d->f[3] > 5 || d->f[3] == -1))
+	if (!d->s)
 		d->s = ft_strdup("(null)");
 	ft_handler_char(d);
 	return (0);
@@ -42,12 +42,6 @@ int				ft_p_conv(t_data *d)
 
 	num = (uintmax_t)va_arg(d->va, void*);
 	d->s = ft_itoa_base(num, "0123456789abcdef");
-	if (num == 0)
-	{
-		free(d->s);
-		d->s = ft_strdup("(nil)");
-		return (-1);
-	}
 	return (0);
 }
 
@@ -56,11 +50,6 @@ int				ft_p_spec(t_data *d)
 	int			i;
 	char		*str;
 
-	if (ft_p_conv(d) == -1)
-	{
-		ft_handler_num(d);
-		return (0);
-	}
 	str = d->s;
 	if (!(d->s = malloc(ft_strlen(str + 3))))
 		return (0);

@@ -6,7 +6,7 @@
 /*   By: yotillar <yotillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 22:18:45 by yotillar          #+#    #+#             */
-/*   Updated: 2020/10/24 18:23:19 by yotillar         ###   ########.fr       */
+/*   Updated: 2021/01/20 22:12:38 by yotillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,16 +90,10 @@ int				ft_check(t_data *d)
 		ft_check_width(d);
 		ft_check_prec(d);
 	}
-	if (d->ft[d->fi] == '%')
-	{
-		ft_buffing('%', d);
-		d->fi++;
-		return (-1);
-	}
 	if (d->fi == (int)ft_strlen(d->ft) ||
 		(d->ft[d->fi] != 'd' && d->ft[d->fi] != 'i' && d->ft[d->fi] != 'u' &&
 		d->ft[d->fi] != 'c' && d->ft[d->fi] != 's' && d->ft[d->fi] != 'p' &&
-		d->ft[d->fi] != 'x' && d->ft[d->fi] != 'X'))
+		d->ft[d->fi] != 'x' && d->ft[d->fi] != 'X' && d->ft[d->fi] != '%'))
 		return (-1);
 	return (0);
 }

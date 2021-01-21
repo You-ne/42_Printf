@@ -6,7 +6,7 @@
 /*   By: yotillar <yotillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/01 17:36:11 by yotillar          #+#    #+#             */
-/*   Updated: 2020/10/24 18:48:26 by yotillar         ###   ########.fr       */
+/*   Updated: 2021/01/21 01:52:49 by yotillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,15 +30,17 @@ void				ft_initialize_specs(t_spec *specs)
 	specs[6].ptr = &ft_x_spec;
 	specs[7].c = 'X';
 	specs[7].ptr = &ft_x_spec;
-	specs[8].c = '0';
-	specs[8].ptr = NULL;
+	specs[8].c = 'X';
+	specs[8].ptr = &ft_pct;
+	specs[9].c = '0';
+	specs[9].ptr = NULL;
 }
 
 void				ft_end(t_data *d)
 {
 	if (d->s)
 	{
-		if (d->spe != 's')
+		if (d->spe != 's' && d->spe != '%')
 			free(d->s);
 		d->s = NULL;
 	}

@@ -6,7 +6,7 @@
 /*   By: yotillar <yotillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/23 00:41:31 by yotillar          #+#    #+#             */
-/*   Updated: 2020/10/24 19:06:19 by yotillar         ###   ########.fr       */
+/*   Updated: 2021/01/20 21:56:54 by yotillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,6 @@ void	ft_char_width(t_data *d, size_t len)
 	int	i;
 
 	i = 0;
-	if (!d->s && (d->f[3] > 5 || d->f[3] == -1))
-		len = 6;
 	if (d->f[1] == 1)
 		ft_char_minus(d, len);
 	else

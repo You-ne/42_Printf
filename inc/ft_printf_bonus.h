@@ -6,7 +6,7 @@
 /*   By: yotillar <yotillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/28 16:19:56 by yotillar          #+#    #+#             */
-/*   Updated: 2020/10/24 19:01:42 by yotillar         ###   ########.fr       */
+/*   Updated: 2021/01/21 01:58:25 by yotillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@
 **-------------------------------- Structure & Define --------------------------
 */
 
-# define NB_SPECS		10
+# define NB_SPECS		11
 # define NB_FLAGS		7
 
 typedef	struct	s_spec
@@ -54,7 +54,7 @@ typedef struct	s_data
 **--------------------------------- Prototypes ---------------------------------
 */
 
-int				ft_printf (const char *format, ...);
+int				ft_printf(const char *format, ...);
 int				ft_dispatch(t_data *d);
 void			ft_buffing(char c, t_data *d);
 void			ft_display(t_data *d);
@@ -92,6 +92,7 @@ int				ft_u_spec(t_data *d);
 int				ft_x_spec(t_data *d);
 int				ft_o_spec(t_data *d);
 int				ft_n_spec(t_data *d);
+int				ft_pct(t_data *d);
 void			ft_null(t_data *d);
 
 int				ft_atoi(const char *str);

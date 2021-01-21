@@ -1,440 +1,63 @@
-Test 173 (p_null) : FAILED.
-    First line of code: {return test("%p", NULL);}
-    SEGFAULT
-
-Test 178 (p_ftfc_5w_throwswarning) : FAILED.
-    First line of code: {return test("%5p", 0);}
-    SEGFAULT
-
-Test 179 (p_basic) : FAILED.
-    First line of code: {return test("%p%p%p%p%p%p%p%p%p%p%p%p",&a01,&a02,&a03,&a04,&a05,&a06,&a07,&a08,&a09,&a10,&a11,&a12);}
-    SEGFAULT
-
-Test 180 (p_width_fit) : FAILED.
-    First line of code: {return test("%70p%70p%70p%70p%70p%70p%70p%70p%70p%70p%70p%70p",&a01,&a02,&a03,&a04,&a05,&a06,&a07,&a08,&a09,&a10,&a11,&a12);    SEGFAULT
-
-Test 181 (p_width_nofit) : FAILED.
-    First line of code: {return test("%5p%5p%5p%5p%5p%5p%5p%5p%5p%5p%5p%5p",&a01,&a02,&a03,&a04,&a05,&a06,&a07,&a08,&a09,&a10,&a11,&a12);}
-    SEGFAULT
-
-Test 182 (p_width_16) : FAILED.
-    First line of code: {return test("%16p%16p%16p%16p%16p%16p%16p%16p%16p%16p%16p%16p",&a01,&a02,&a03,&a04,&a05,&a06,&a07,&a08,&a09,&a10,&a11,&a12);    SEGFAULT
-
-Test 183 (p_width_8) : FAILED.
-    First line of code: {return test("%8p%8p%8p%8p%8p%8p%8p%8p%8p%8p%8p%8p",&a01,&a02,&a03,&a04,&a05,&a06,&a07,&a08,&a09,&a10,&a11,&a12);}
-    SEGFAULT
-
-Test 184 (p_width_32) : FAILED.
-    First line of code: {return test("%32p%32p%32p%32p%32p%32p%32p%32p%32p%32p%32p%32p",&a01,&a02,&a03,&a04,&a05,&a06,&a07,&a08,&a09,&a10,&a11,&a12);    SEGFAULT
-
-Test 185 (p_width_fit_lj) : FAILED.
-    First line of code: {return test("%-70p%-70p%-70p%-70p%-70p%-70p%-70p%-70p%-70p%-70p%-70p%-70p",&a01,&a02,&a03,&a04,&a05,&a06,&a07,&a08,&a09,&a10    SEGFAULT
-
-Test 186 (p_width_nofit_lj) : FAILED.
-    First line of code: {return test("%-5p%-5p%-5p%-5p%-5p%-5p%-5p%-5p%-5p%-5p%-5p%-5p",&a01,&a02,&a03,&a04,&a05,&a06,&a07,&a08,&a09,&a10,&a11,&a12);    SEGFAULT
-
-Test 187 (p_width_16_lj) : FAILED.
-    First line of code: {return test("%-16p%-16p%-16p%-16p%-16p%-16p%-16p%-16p%-16p%-16p%-16p%-16p",&a01,&a02,&a03,&a04,&a05,&a06,&a07,&a08,&a09,&a10    SEGFAULT
-
-Test 188 (p_width_8_lj) : FAILED.
-    First line of code: {return test("%-8p%-8p%-8p%-8p%-8p%-8p%-8p%-8p%-8p%-8p%-8p%-8p",&a01,&a02,&a03,&a04,&a05,&a06,&a07,&a08,&a09,&a10,&a11,&a12);    SEGFAULT
-
-Test 189 (p_width_32_lj) : FAILED.
-    First line of code: {return test("%-32p%-32p%-32p%-32p%-32p%-32p%-32p%-32p%-32p%-32p%-32p%-32p",&a01,&a02,&a03,&a04,&a05,&a06,&a07,&a08,&a09,&a10    SEGFAULT
-
-Test 505 (nocrash_notrequired_noarg_16) : FAILED.
-    (nocrash test: automatically passes provided no unexpected failure)
-    First line of code: {return test("%p"); }
-    SEGFAULT
-
-Test 520 (nocrash_notrequired_nullarg_16) : FAILED.
-    (nocrash test: automatically passes provided no unexpected failure)
-    First line of code: {return test("%p", NULL); }
-    SEGFAULT
-
-Test 539 (nocrash_notrequired_p_prec_1) : FAILED.
-    (nocrash test: automatically passes provided no unexpected failure)
-    First line of code: {return test("%.4p", &ncm_p);}
-    SEGFAULT
-
-Test 540 (nocrash_notrequired_p_prec_2) : FAILED.
-    (nocrash test: automatically passes provided no unexpected failure)
-    First line of code: {return test("%.p", &ncm_p);}
-    SEGFAULT
-
-Test 541 (nocrash_notrequired_p_zp_1) : FAILED.
-    (nocrash test: automatically passes provided no unexpected failure)
-    First line of code: {return test("%05p", &ncm_p);}
-    SEGFAULT
-
-Test 542 (nocrash_notrequired_p_zp_2) : FAILED.
-    (nocrash test: automatically passes provided no unexpected failure)
-    First line of code: {return test("%0p", &ncm_p);}
-    SEGFAULT
-
-Test 543 (nocrash_notrequired_p_lj_nowidth) : FAILED.
-    (nocrash test: automatically passes provided no unexpected failure)
-    First line of code: {return test("%-p", &ncm_p);}
-    SEGFAULT
-
-Test 594 (moul_mix_1) : FAILED.
-    First line of code: {int r00 = 0; return test("Lalalala, %d%% des gens qui parlent à Ly adorent %s. Ou Presque. %p", 100, "Ly", &r00);}
-    SEGFAULT
-
-Test 651 (mix_test_0) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 652 (mix_test_1) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 653 (mix_test_2) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 656 (mix_test_5) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 657 (mix_test_6) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 659 (mix_test_8) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 661 (mix_test_10) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 662 (mix_test_11) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 665 (mix_test_14) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 666 (mix_test_15) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 669 (mix_test_18) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 670 (mix_test_19) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 671 (mix_test_20) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 672 (mix_test_21) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 674 (mix_test_23) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 675 (mix_test_24) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 676 (mix_test_25) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 677 (mix_test_26) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 678 (mix_test_27) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 679 (mix_test_28) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 680 (mix_test_29) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 681 (mix_test_30) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 682 (mix_test_31) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 683 (mix_test_32) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 684 (mix_test_33) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 685 (mix_test_34) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 686 (mix_test_35) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 687 (mix_test_36) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 688 (mix_test_37) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 690 (mix_test_39) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 691 (mix_test_40) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 692 (mix_test_41) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 694 (mix_test_43) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 695 (mix_test_44) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 697 (mix_test_46) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 698 (mix_test_47) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 699 (mix_test_48) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 701 (mix_test_50) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 702 (mix_test_51) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 704 (mix_test_53) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 705 (mix_test_54) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 706 (mix_test_55) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 707 (mix_test_56) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 709 (mix_test_58) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 710 (mix_test_59) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 713 (mix_test_62) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 716 (mix_test_65) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 717 (mix_test_66) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 718 (mix_test_67) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 719 (mix_test_68) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 720 (mix_test_69) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 722 (mix_test_71) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 723 (mix_test_72) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 724 (mix_test_73) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 725 (mix_test_74) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 726 (mix_test_75) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 727 (mix_test_76) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 728 (mix_test_77) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 729 (mix_test_78) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 730 (mix_test_79) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 731 (mix_test_80) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 735 (mix_test_84) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 736 (mix_test_85) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 737 (mix_test_86) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 738 (mix_test_87) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 739 (mix_test_88) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 740 (mix_test_89) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 741 (mix_test_90) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 742 (mix_test_91) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 743 (mix_test_92) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 744 (mix_test_93) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 745 (mix_test_94) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 746 (mix_test_95) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 747 (mix_test_96) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 748 (mix_test_97) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 749 (mix_test_98) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 750 (mix_test_99) : FAILED.
-    First line of code: {return test(
-    SEGFAULT
-
-Test 756 (mix_successive_20) : FAILED.
-    First line of code: {return ( test("%p", &mx_i) + test("%s", mx_s));}
-    SEGFAULT
-
-Test 768 (mix_successive_61) : FAILED.
-    First line of code: {return ( test("%p", &mx_i) + test("%c", mx_c));}
-    SEGFAULT
-
-Test 877 (nocrash_notrequired_bonus_as_p_1) : FAILED.
-    (nocrash test: automatically passes provided no unexpected failure)
-    First line of code: {return test("%+p", &ncm_p);}
-    SEGFAULT
-
-Test 878 (nocrash_notrequired_bonus_as_p_2) : FAILED.
-    (nocrash test: automatically passes provided no unexpected failure)
-    First line of code: {return test("%+p", &ncm_p);}
-    SEGFAULT
-
-Test 1034 (nocrash_notrequired_bonus_sp_p_1) : FAILED.
-    (nocrash test: automatically passes provided no unexpected failure)
-    First line of code: {return test("% p", &ncm_p);}
-    SEGFAULT
-
-Test 1035 (nocrash_notrequired_bonus_sp_p_2) : FAILED.
-    (nocrash test: automatically passes provided no unexpected failure)
-    First line of code: {return test("% p", &ncm_p);}
-    SEGFAULT
-
-Test 1135 (nocrash_notrequired_bonus_af_p) : FAILED.
-    (nocrash test: automatically passes provided no unexpected failure)
-    First line of code: {return test("%#p", &ncm_p);}
-    SEGFAULT
-
-Test 4203 (p_neg_prec_star_01) : FAILED.
-    First line of code: {return test("%.*p", -3, s_hello);}
-    SEGFAULT
-
-Test 4204 (p_neg_prec_star_02) : FAILED.
-    First line of code: {return test("%.*p", -1, s_hello);}
-    SEGFAULT
-
-Test 4205 (p_neg_prec_star_03) : FAILED.
-    First line of code: {return test("%.*p", -3, 0);}
-    SEGFAULT
-
-Test 4206 (p_neg_prec_star_04) : FAILED.
-    First line of code: {return test("%.*p", -1, 0);}
-    SEGFAULT
+Test   7 (pct_5w) : FAILED.
+    First line of code: {return test("%5%");}
+      expected output : "%"
+      your output     : "    %"
+      expected (nonprintable as hex) : "%"
+      actual   (nonprintable as hex) : "    %"
+
+Test   8 (pct_5wlj) : FAILED.
+    First line of code: {return test("%-5%");}
+      expected output : "%"
+      your output     : "%    "
+      expected (nonprintable as hex) : "%"
+      actual   (nonprintable as hex) : "%    "
+
+Test   9 (pct_5wzp) : FAILED.
+    First line of code: {return test("%05%");}
+      expected output : "%"
+      your output     : "0000%"
+      expected (nonprintable as hex) : "%"
+      actual   (nonprintable as hex) : "0000%"
+
+Test  10 (pct_5wljzp) : FAILED.
+    First line of code: {return test("%-05%");}
+      expected output : "%"
+      your output     : "%    "
+      expected (nonprintable as hex) : "%"
+      actual   (nonprintable as hex) : "%    "
+
+Test  91 (s_prec_03_no_width_s_null) : FAILED.
+    First line of code: {return test("%.03s", NULL);}
+      expected output : ""
+      your output     : "(nu"
+      expected (nonprintable as hex) : ""
+      actual   (nonprintable as hex) : "(nu"
+
+Test 113 (s_prec_1_width_3_s_null) : FAILED.
+    First line of code: {return test("%3.1s", NULL);}
+      expected output : "   "
+      your output     : "  ("
+      expected (nonprintable as hex) : "   "
+      actual   (nonprintable as hex) : "  ("
+
+Test 114 (s_prec_1_width_9_s_null) : FAILED.
+    First line of code: {return test("%9.1s", NULL);}
+      expected output : "         "
+      your output     : "        ("
+      expected (nonprintable as hex) : "         "
+      actual   (nonprintable as hex) : "        ("
+
+Test 117 (s_prec_1_lj_width_3_s_null) : FAILED.
+    First line of code: {return test("%-3.1s", NULL);}
+      expected output : "   "
+      your output     : "(  "
+      expected (nonprintable as hex) : "   "
+      actual   (nonprintable as hex) : "(  "
+
+Test 118 (s_prec_1_lj_width_9_s_null) : FAILED.
+    First line of code: {return test("%-9.1s", NULL);}
+      expected output : "         "
+      your output     : "(        "
+      expected (nonprintable as hex) : "         "
+      actual   (nonprintable as hex) : "(        "
 

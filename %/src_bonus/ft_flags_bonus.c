@@ -95,16 +95,11 @@ int				ft_check(t_data *d)
 		ft_check_width(d);
 		ft_check_prec(d);
 	}
-	if (d->ft[d->fi] == '%')
-	{
-		ft_buffing('%', d);
-		d->fi++;
-		return (-1);
-	}
 	if (d->fi == (int)ft_strlen(d->ft) || (d->ft[d->fi] != 'd' &&
 		d->ft[d->fi] != 'i' && d->ft[d->fi] != 'u' && d->ft[d->fi] != 'c'
 		&& d->ft[d->fi] != 's' && d->ft[d->fi] != 'p' && d->ft[d->fi] != 'x' &&
-		d->ft[d->fi] != 'X' && d->ft[d->fi] != 'o' && d->ft[d->fi] != 'n'))
+		d->ft[d->fi] != 'X' && d->ft[d->fi] != 'o' && d->ft[d->fi] != 'n' &&
+		d->ft[d->fi] != '%'))
 		return (-1);
 	return (0);
 }

@@ -2,7 +2,7 @@
 
 int		main()
 {
-	char	*s;
+/*	char	*s;
 	s = NULL;
 	ft_printf("..Printf:");
 	printf("%.03s\n", s);
@@ -23,6 +23,8 @@ int		main()
 	ft_printf("..Printf:");
 	printf("%-9.1s\n", s);
 	ft_printf("ft_printf:");
-	ft_printf("%-9.1s\n", s);
+	ft_printf("%-9.1s\n", s);*/
+	printf("%% *.5i 42 == |% *.5i|\n", 4 , 42);
+	ft_printf("%% *.5i 42 == |% *.5i|\n", 4 , 42);
 	return(0);
 }

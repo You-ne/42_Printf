@@ -1,0 +1,28 @@
+Test   7 (pct_5w) : FAILED.
+    First line of code: {return test("%5%");}
+      expected output : "    %"
+      your output     : "%"
+      expected (nonprintable as hex) : "    %"
+      actual   (nonprintable as hex) : "%"
+
+Test   8 (pct_5wlj) : FAILED.
+    First line of code: {return test("%-5%");}
+      expected output : "%    "
+      your output     : "%"
+      expected (nonprintable as hex) : "%    "
+      actual   (nonprintable as hex) : "%"
+
+Test   9 (pct_5wzp) : FAILED.
+    First line of code: {return test("%05%");}
+      expected output : "0000%"
+      your output     : "%"
+      expected (nonprintable as hex) : "0000%"
+      actual   (nonprintable as hex) : "%"
+
+Test  10 (pct_5wljzp) : FAILED.
+    First line of code: {return test("%-05%");}
+      expected output : "%    "
+      your output     : "%"
+      expected (nonprintable as hex) : "%    "
+      actual   (nonprintable as hex) : "%"
+

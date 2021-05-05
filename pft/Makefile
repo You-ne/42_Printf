@@ -6,7 +6,7 @@
 #    By: gfielder <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/28 21:19:45 by gfielder          #+#    #+#              #
-#    Updated: 2019/07/08 22:40:24 by gfielder         ###   ########.fr        #
+#    Updated: 2021/05/03 17:32:30 by yotillar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,9 +49,6 @@ ifeq ($(USE_SEPARATE_LIBFT),1)
 LIB=$(LIBFT_DIR_PATH)/$(LIBFT_NAME)
 else
 LIB=
-endif
-ifeq ($(INCLUDE_LIBPTHREAD),1)
-LIB +=	-lpthread
 endif
 
 TEST_HISTORY_MOD_TIME:=$(shell stat -r $(TEST_LOG) 2> /dev/null | awk '{ print $$9 }' 2> /dev/null)

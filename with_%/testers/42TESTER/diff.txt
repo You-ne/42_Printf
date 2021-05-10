@@ -1,0 +1,5 @@
+----------Test 510 : ----------
+"%c, %-c, %12c, %-3c, %-1c, %1c, %-2c, %-4c, %5c, %3c, %-*c, %-*c, %*c, %*c" // 1st '*' = 12, 2nd '*' = 18
+
+Binary files ft.txt and printf.txt differ
+

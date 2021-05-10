@@ -6,7 +6,7 @@
 /*   By: yotillar <yotillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/22 19:29:41 by yotillar          #+#    #+#             */
-/*   Updated: 2020/10/24 22:31:57 by yotillar         ###   ########.fr       */
+/*   Updated: 2021/05/10 23:33:13 by yotillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,10 @@ void		ft_handler_num(t_data *d)
 	else
 	{
 		ft_sign(d, &i);
-		while (d->s[++i] != '\0' && d->f[2] == 0 && d->f[3] < 0)
+		while (d->s[++i] != '\0' && d->f[2] == 0 && d->f[3] <= 0
+			&& !(d->f[3] == 0 && d->zero == 1))
 			ft_buffing(d->s[i], d);
 	}
+	d->zero = 0;
 	ft_end(d);
 }

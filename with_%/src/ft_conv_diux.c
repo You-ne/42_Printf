@@ -6,7 +6,7 @@
 /*   By: yotillar <yotillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/22 19:11:48 by yotillar          #+#    #+#             */
-/*   Updated: 2020/10/24 18:59:03 by yotillar         ###   ########.fr       */
+/*   Updated: 2021/05/11 00:06:34 by yotillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ int					ft_d_spec(t_data *d)
 	arg = 0;
 	if (d->spe == 'd' || d->spe == 'i')
 		arg = (intmax_t)(va_arg(d->va, int));
+	if (arg == 0)
+		d->zero = 1;
 	d->s = ft_itoa_base(arg, "0123456789");
 	ft_handler_num(d);
 	return (0);
@@ -31,6 +33,8 @@ int					ft_u_spec(t_data *d)
 	arg = 0;
 	if (d->spe == 'u')
 		arg = (unsigned int)(va_arg(d->va, unsigned int));
+	if (arg == 0)
+		d->zero = 1;
 	d->s = ft_itoa_base(arg, "0123456789");
 	ft_handler_num(d);
 	return (0);
@@ -44,6 +48,8 @@ int					ft_x_spec(t_data *d)
 	arg = 0;
 	if (d->spe == 'x' || d->spe == 'X')
 		arg = (unsigned int)va_arg(d->va, unsigned int);
+	if (arg == 0)
+		d->zero = 1;
 	d->s = ft_itoa_base(arg, "0123456789abcdef");
 	if (d->spe == 'X')
 	{

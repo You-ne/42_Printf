@@ -35,13 +35,16 @@ int		main()
 		a++;
 	}
 */
+
+	printf("TEST 23");
+	printf("%1.i, %1.d, %1.d, %1.d, %1.d, %1.d, %1.d, %1.d\n", i, j, k, l, m, c, e, d);
+	ft_printf("%1.i, %1.d, %1.d, %1.d, %1.d, %1.d, %1.d, %1.d\n", i, j, k, l, m, c, e, d);
 	/*
 	a = 12;
 	b = 18;
 	printf("TEST C1\n");
 	printf("%c,  %-c, %1c, %*c,  %-*c,  %*c, %-*c\n", c, n[0], o[0], a, p[0], a, q[0], a, r[0], a, c);
 	ft_printf("%c,  %-c, %1c, %*c,  %-*c,  %*c, %-*c\n", c, n[0], o[0], a, p[0], a, q[0], a, r[0], a, c);
-
 	printf("TEST C2\n");
 	printf("%c,  %-c, %1c, %*c,  %-*c,  %*c, %-*c\n", c, n[0], o[0], -a, p[0], -a, q[0], -a, r[0], -a, c);
 	ft_printf("%c,  %-c, %1c, %*c,  %-*c,  %*c, %-*c\n", c, n[0], o[0], -a, p[0], -a, q[0], -a, r[0], -a, c);
@@ -70,7 +73,7 @@ int		main()
 	printf("%-2s, %.s, %-4s, %-2.4s, %-8.12s, %3s, %8s, %---2s, %.*s, %.0s, %.1s, %.2s, %.4s, %.8s\n", NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, -2, NULL, NULL, NULL, NULL, NULL, NULL);
 	ft_printf("%-2s, %.s, %-4s, %-2.4s, %-8.12s, %3s, %8s, %---2s, %.*s, %.0s, %.1s, %.2s, %.4s, %.8s\n", NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, -2, NULL, NULL, NULL, NULL, NULL, NULL);
 */
-	printf("%5%\n");
+	/*printf("%5%\n");
 	ft_printf("%5%\n");
 	printf("%-5%\n");
 	ft_printf("%-5%\n");
@@ -81,5 +84,5 @@ int		main()
 	
 	printf("%% *.5i 42 == |%*.5i|\n", 4, 42);
 	ft_printf("%% *.5i 42 == |%*.5i|\n", 4, 42);
-	return (0);
+	*/return (0);
 }

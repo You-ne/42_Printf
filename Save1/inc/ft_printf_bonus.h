@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_printf_bonus.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yotillar <yotillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/28 16:19:56 by yotillar          #+#    #+#             */
-/*   Updated: 2021/05/11 22:20:21 by yotillar         ###   ########.fr       */
+/*   Updated: 2021/01/21 02:42:36 by yotillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#ifndef FT_PRINTF_BONUS_H
+# define FT_PRINTF_BONUS_H
 
 /*
 **---------------------------------- Headers -----------------------------------
@@ -28,8 +28,8 @@
 **-------------------------------- Structure & Define --------------------------
 */
 
-# define NB_SPECS		8
-# define NB_FLAGS		4
+# define NB_SPECS		11
+# define NB_FLAGS		7
 
 typedef	struct	s_spec
 {
@@ -48,7 +48,6 @@ typedef struct	s_data
 	char		buff[128];
 	int			bi;
 	va_list		va;
-	int			zero;
 }				t_data;
 
 /*

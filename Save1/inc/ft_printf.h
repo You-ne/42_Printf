@@ -6,7 +6,7 @@
 /*   By: yotillar <yotillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/28 16:19:56 by yotillar          #+#    #+#             */
-/*   Updated: 2021/05/11 22:20:21 by yotillar         ###   ########.fr       */
+/*   Updated: 2021/05/10 23:32:50 by yotillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,6 @@ int				ft_u_spec(t_data *d);
 int				ft_x_spec(t_data *d);
 int				ft_o_spec(t_data *d);
 int				ft_n_spec(t_data *d);
-int				ft_pct(t_data *d);
 void			ft_null(t_data *d);
 
 int				ft_atoi(const char *str);

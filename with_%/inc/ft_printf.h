@@ -6,7 +6,7 @@
 /*   By: yotillar <yotillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/28 16:19:56 by yotillar          #+#    #+#             */
-/*   Updated: 2021/05/11 22:20:21 by yotillar         ###   ########.fr       */
+/*   Updated: 2021/05/11 22:24:11 by yotillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@
 **-------------------------------- Structure & Define --------------------------
 */
 
-# define NB_SPECS		8
+# define NB_SPECS		9
 # define NB_FLAGS		4
 
 typedef	struct	s_spec

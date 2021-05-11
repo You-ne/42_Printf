@@ -36,7 +36,7 @@ int		main()
 	}
 */
 
-	printf("TEST 23");
+	printf("TEST 23\n");
 	printf("%1.i, %1.d, %1.d, %1.d, %1.d, %1.d, %1.d, %1.d\n", i, j, k, l, m, c, e, d);
 	ft_printf("%1.i, %1.d, %1.d, %1.d, %1.d, %1.d, %1.d, %1.d\n", i, j, k, l, m, c, e, d);
 	/*

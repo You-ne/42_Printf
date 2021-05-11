@@ -6,7 +6,7 @@
 /*   By: yotillar <yotillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/22 21:25:09 by yotillar          #+#    #+#             */
-/*   Updated: 2021/05/11 19:35:17 by yotillar         ###   ########.fr       */
+/*   Updated: 2021/05/11 19:58:06 by yotillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int				ft_c_spec(t_data *d)
 int				ft_s_spec(t_data *d)
 {
 	d->s = va_arg(d->va, char*);
-	if (!d->s && (d->f[3] > 5 || d->f[3] == -1))
+	if (!d->s) // && (d->f[3] > 5 || d->f[3] == -1))
 		d->s = ft_strdup("(null)");
 	ft_handler_char(d);
 	return (0);

@@ -64,9 +64,9 @@ int		main()
 //	printf("My Test\n");
 //	printf("\n");
 //	ft_printf("\n");
-	printf("TEST P NULL\n");
-	printf("%.2p\n", NULL);
-	ft_printf("%.2p\n", NULL);
+	printf("TEST S NULL\n");
+	printf("%-2s, %.s, %-4s, %-2.4s, %-8.12s, %3s, %8s, %---2s, %.*s, %.0s, %.1s, %.2s, %.4s, %.8s\n", NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, -2, NULL, NULL, NULL, NULL, NULL, NULL);
+	ft_printf("%-2s, %.s, %-4s, %-2.4s, %-8.12s, %3s, %8s, %---2s, %.*s, %.0s, %.1s, %.2s, %.4s, %.8s\n", NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, -2, NULL, NULL, NULL, NULL, NULL, NULL);
 
 	return (0);
 }

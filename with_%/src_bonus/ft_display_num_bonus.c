@@ -6,7 +6,7 @@
 /*   By: yotillar <yotillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/22 19:51:19 by yotillar          #+#    #+#             */
-/*   Updated: 2020/10/24 19:06:47 by yotillar         ###   ########.fr       */
+/*   Updated: 2021/05/11 22:59:32 by yotillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void		ft_num_width(t_data *d)
 
 	i = 0;
 	len = 0;
-	if (d->f[3] > 0 || d->f[3] == -1)
+	if ((d->f[3] > 0 || d->f[3] == -1) && !(d->f[3] == 0 && d->zero == 1))
 		len = ft_strlen(d->s);
 	if ((int)len < d->f[2])
 		ft_num_width2(d, len);
@@ -53,7 +53,7 @@ void		ft_num_width(t_data *d)
 	{
 		ft_sign(d, &i);
 		d->f[6] == 1 ? ft_hash(d) : 0;
-		while (i < len)
+		while (i < len && !(d->zero == 1 && d->f[3] == 0))
 			ft_buffing(d->s[i++], d);
 	}
 }
@@ -81,7 +81,7 @@ void		ft_num_only_prec(t_data *d)
 void		ft_num_zero(t_data *d, size_t len)
 {
 	size_t		i;
-	size_t		len_pad;
+	size_t		len_pad; 
 
 	i = 0;
 	len_pad = d->f[2] - len;

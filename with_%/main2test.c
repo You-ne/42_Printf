@@ -79,7 +79,7 @@ int		main()
 	printf("%-05%\n");
 	ft_printf("%-05%\n");
 	
-	printf("%% *.5i 42 == |% *.5i|\n", 4, 42);
-	ft_printf("%% *.5i 42 == |% *.5i|\n", 4, 42);
+	printf("%% *.5i 42 == |%*.5i|\n", 4, 42);
+	ft_printf("%% *.5i 42 == |%*.5i|\n", 4, 42);
 	return (0);
 }

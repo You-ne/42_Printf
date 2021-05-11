@@ -6,7 +6,7 @@
 /*   By: yotillar <yotillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/28 16:19:56 by yotillar          #+#    #+#             */
-/*   Updated: 2021/01/21 02:42:36 by yotillar         ###   ########.fr       */
+/*   Updated: 2021/05/11 22:41:20 by yotillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ typedef struct	s_data
 	int			fi;
 	char		buff[128];
 	int			bi;
+	int			zero;
 	va_list		va;
 }				t_data;
 

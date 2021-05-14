@@ -6,7 +6,7 @@
 /*   By: yotillar <yotillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/22 19:51:19 by yotillar          #+#    #+#             */
-/*   Updated: 2021/05/14 03:21:03 by yotillar         ###   ########.fr       */
+/*   Updated: 2021/05/14 03:25:55 by yotillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ void		ft_num_width(t_data *d)
 	len = 0;
 	if ((d->f[3] >= 0 || d->f[3] == -1) && !(d->f[3] == 0 && d->zero == 1))
 		len = ft_strlen(d->s);
+	if (d->spe == 'p' && d->f[3] == 0 && d->zero == 1)
+		len = 2;
 	if ((int)len < d->f[2])
 		ft_num_width2(d, len);
 	else

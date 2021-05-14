@@ -6,7 +6,7 @@
 /*   By: yotillar <yotillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/01 19:02:53 by yotillar          #+#    #+#             */
-/*   Updated: 2020/10/23 16:04:04 by yotillar         ###   ########.fr       */
+/*   Updated: 2021/05/14 02:55:56 by yotillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,5 @@ void	ft_buffing(char c, t_data *d)
 	d->buff[d->bi] = c;
 	d->bi++;
 	if (d->bi == 127)
-	{
-		write(1, &d->buff, 127);
-		d->ret += 127;
-		while (d->bi > 0)
-		{
-			d->buff[d->bi] = '\0';
-			d->bi--;
-		}
-	}
+		ft_display(d);
 }

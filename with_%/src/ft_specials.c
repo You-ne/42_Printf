@@ -6,7 +6,7 @@
 /*   By: yotillar <yotillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/10 20:35:00 by yotillar          #+#    #+#             */
-/*   Updated: 2021/05/11 22:19:10 by yotillar         ###   ########.fr       */
+/*   Updated: 2021/05/14 02:54:29 by yotillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,12 @@ void	ft_display(t_data *d)
 {
 	write(1, &d->buff, d->bi);
 	d->ret += d->bi;
-	d->bi = 0;
+	while (d->bi > 0)
+	{
+		d->buff[d->bi] = '\0';
+		d->bi--;
+	}
+	d->buff[d->bi] = '\0';
 }
 
 void	ft_pct2(t_data *d)

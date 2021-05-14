@@ -2,7 +2,7 @@
 
 int		main()
 {
-	int		a = -4;
+/*	int		a = -4;
 	int		b = 0;
 	char	c = 'a';
 	int		d = 2147483647;
@@ -23,7 +23,7 @@ int		main()
 	char	*s = "-2147483648";
 	char	*t = "0x12345678";
 	char	*u = "-0";
-
+*/
 /*	a = -1;
 	while (a < 5)
 	{
@@ -35,11 +35,12 @@ int		main()
 		a++;
 	}
 */
-
+/*
 	printf("TEST 23\n");
 	printf("%1.i, %1.d, %1.d, %1.d, %1.d, %1.d, %1.d, %1.d\n", i, j, k, l, m, c, e, d);
 	ft_printf("%1.i, %1.d, %1.d, %1.d, %1.d, %1.d, %1.d, %1.d\n", i, j, k, l, m, c, e, d);
-	/*
+*/
+/*
 	a = 12;
 	b = 18;
 	printf("TEST C1\n");
@@ -56,14 +57,19 @@ int		main()
 	printf("TEST C4\n");
 	printf("%c,  %-c, %1c, %*c,  %-*c,  %*c\n", -12, -1, -255, a, -12, a, -1, a, -255);
 	ft_printf("%c,  %-c, %1c, %*c,  %-*c,  %*c\n", -12, -1, -255, a, -12, a, -1, a, -255);
-	
-	printf("TEST 510\n");
-	printf("%c, %-c, %12c, %-3c, %-1c, %1c, %-2c, %-4c, %5c, %3c, %-*c, %-*c, %*c, %*c\n", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0);
-	ft_printf("%c, %-c, %12c, %-3c, %-1c, %1c, %-2c, %-4c, %5c, %3c, %-*c, %-*c, %*c, %*c\n", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0);
-	
+*/	
+	int fg;
+	int	df;
+
+//	printf("TEST 510\n");
+	fg = printf("%.*p\n", 0, NULL); // %-c, %12c, %-3c, %-1c, %1c, %-2c, %-4c, %5c, %3c, %-*c, %-*c, %*c, %*c\n", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12, 0, 18, 0, 12, 0, 18, 0);
+	df = ft_printf("%.*p\n", 0, NULL); //%-c, %12c, %-3c, %-1c, %1c, %-2c, %-4c, %5c, %3c, %-*c, %-*c, %*c, %*c\n", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12, 0, 18, 0, 12, 0, 18, 0);
+	printf("printf = %d \nmine = %d\n", fg, df);
+/*	
 	printf("TEST NULL\n");
 	printf("%-2s, %.s, %-4s, %-2.4s, %-8.12s, %3s, %8s, %---2s, %.*s, %.0s, %.1s, %.2s, %.4s, %.8s\n", NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, -2, NULL, NULL, NULL, NULL, NULL, NULL);
 	ft_printf("%-2s, %.s, %-4s, %-2.4s, %-8.12s, %3s, %8s, %---2s, %.*s, %.0s, %.1s, %.2s, %.4s, %.8s\n", NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, -2, NULL, NULL, NULL, NULL, NULL, NULL);*/
+
 /*
 	printf("My Test\n");
 	printf("\n");

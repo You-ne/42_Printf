@@ -6,7 +6,7 @@
 /*   By: yotillar <yotillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/22 19:51:19 by yotillar          #+#    #+#             */
-/*   Updated: 2021/05/11 23:41:31 by yotillar         ###   ########.fr       */
+/*   Updated: 2021/05/12 18:55:32 by yotillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ void		ft_num_only_prec(t_data *d)
 void		ft_num_zero(t_data *d, size_t len)
 {
 	size_t		i;
-	size_t		len_pad; 
+	size_t		len_pad;
 
 	i = 0;
 	len_pad = d->f[2] - len;

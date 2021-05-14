@@ -6,7 +6,7 @@
 #    By: yotillar <yotillar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/29 21:03:36 by yotillar          #+#    #+#              #
-#    Updated: 2021/05/11 23:42:46 by yotillar         ###   ########.fr        #
+#    Updated: 2021/05/12 19:15:09 by yotillar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,8 +52,8 @@ BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(BONUS_OBJS) $(BONUS_INCLUDE)
-	ar -rcs $(NAME) $(BONUS_OBJS)
+$(NAME): $(OBJS) $(INCLUDE)
+	ar -rcs $(NAME) $(OBJS)
 
 bonus:	$(BONUS_OBJS) $(BONUS_INCLUDE)
 	ar -rcs $(NAME) $(BONUS_OBJS)

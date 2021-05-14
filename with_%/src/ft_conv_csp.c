@@ -6,7 +6,7 @@
 /*   By: yotillar <yotillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/22 21:25:09 by yotillar          #+#    #+#             */
-/*   Updated: 2021/05/14 02:40:15 by yotillar         ###   ########.fr       */
+/*   Updated: 2021/05/14 03:12:35 by yotillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,10 @@ int				ft_p_conv(t_data *d)
 	uintmax_t	num;
 
 	num = (uintmax_t)va_arg(d->va, void*);
-	d->s = ft_itoa_base(num, "0123456789abcdef");
+	if (num == 0)
+		d->zero = 1;
+	if (!(d->s = ft_itoa_base(num, "0123456789abcdef")))
+		return (-1);
 	return (0);
 }
 

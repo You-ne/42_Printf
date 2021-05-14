@@ -6,7 +6,7 @@
 /*   By: yotillar <yotillar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/22 19:29:41 by yotillar          #+#    #+#             */
-/*   Updated: 2021/05/10 23:33:13 by yotillar         ###   ########.fr       */
+/*   Updated: 2021/05/14 02:17:11 by yotillar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ void		ft_handler_char(t_data *d)
 		{
 			ft_display(d);
 			write(1, d->s, 1);
+			d->bi += 1;
 		}
 		while (i < (int)len && !(d->spe == 'c' && d->s && d->s[0] == '\0'))
 			ft_buffing(d->s[i++], d);

@@ -1,0 +1,75 @@
+Test  91 (s_prec_03_no_width_s_null) : FAILED.
+    First line of code: {return test("%.03s", NULL);}
+      expected output : ""
+      your output     : "(nu"
+      expected (nonprintable as hex) : ""
+      actual   (nonprintable as hex) : "(nu"
+
+Test 113 (s_prec_1_width_3_s_null) : FAILED.
+    First line of code: {return test("%3.1s", NULL);}
+      expected output : "   "
+      your output     : "  ("
+      expected (nonprintable as hex) : "   "
+      actual   (nonprintable as hex) : "  ("
+
+Test 114 (s_prec_1_width_9_s_null) : FAILED.
+    First line of code: {return test("%9.1s", NULL);}
+      expected output : "         "
+      your output     : "        ("
+      expected (nonprintable as hex) : "         "
+      actual   (nonprintable as hex) : "        ("
+
+Test 117 (s_prec_1_lj_width_3_s_null) : FAILED.
+    First line of code: {return test("%-3.1s", NULL);}
+      expected output : "   "
+      your output     : "(  "
+      expected (nonprintable as hex) : "   "
+      actual   (nonprintable as hex) : "(  "
+
+Test 118 (s_prec_1_lj_width_9_s_null) : FAILED.
+    First line of code: {return test("%-9.1s", NULL);}
+      expected output : "         "
+      your output     : "(        "
+      expected (nonprintable as hex) : "         "
+      actual   (nonprintable as hex) : "(        "
+
+Test 180 (p_width_fit) : FAILED.
+    First line of code: {return test("%70p%70p%70p%70p%70p%70p%70p%70p%70p%70p%70p%70p",&a01,&a02,&a03,&a04,&a05,&a06,&a07,&a08,&a09,&a10,&a11,&a12);      expected output : "                                                        0x5573dddaaee8                                                        0x5573dddaaee9          "
+      your output     : "                                                            0x5573dddaaee8                                                            0x5573dddaaee9  "
+      expected (nonprintable as hex) : "                                                        0x5573dddaaee8                                                        0x5573dddaaee9          "
+      actual   (nonprintable as hex) : "                                                            0x5573dddaaee8                                                            0x5573dddaaee9  "
+
+Test 182 (p_width_16) : FAILED.
+    First line of code: {return test("%16p%16p%16p%16p%16p%16p%16p%16p%16p%16p%16p%16p",&a01,&a02,&a03,&a04,&a05,&a06,&a07,&a08,&a09,&a10,&a11,&a12);      expected output : "  0x5573dddaaee8  0x5573dddaaee9  0x5573dddaaeea  0x5573dddaaeec  0x5573dddaaef0  0x5573dddaaef4  0x5573dddaaef8  0x5573dddaaf00  0x5573dddaaf08  0x55"
+      your output     : "      0x5573dddaaee8      0x5573dddaaee9      0x5573dddaaeea      0x5573dddaaeec      0x5573dddaaef0      0x5573dddaaef4      0x5573dddaaef8      0x55"
+      expected (nonprintable as hex) : "  0x5573dddaaee8  0x5573dddaaee9  0x5573dddaaeea  0x5573dddaaeec  0x5573dddaaef0  0x5573dddaaef4  0x5573dddaaef8  0x5573dddaaf00  0x5573dddaaf08  0x55"
+      actual   (nonprintable as hex) : "      0x5573dddaaee8      0x5573dddaaee9      0x5573dddaaeea      0x5573dddaaeec      0x5573dddaaef0      0x5573dddaaef4      0x5573dddaaef8      0x55"
+
+Test 184 (p_width_32) : FAILED.
+    First line of code: {return test("%32p%32p%32p%32p%32p%32p%32p%32p%32p%32p%32p%32p",&a01,&a02,&a03,&a04,&a05,&a06,&a07,&a08,&a09,&a10,&a11,&a12);      expected output : "                  0x5573dddaaee8                  0x5573dddaaee9                  0x5573dddaaeea                  0x5573dddaaeec                  0x55"
+      your output     : "                      0x5573dddaaee8                      0x5573dddaaee9                      0x5573dddaaeea                      0x5573dddaaeec      "
+      expected (nonprintable as hex) : "                  0x5573dddaaee8                  0x5573dddaaee9                  0x5573dddaaeea                  0x5573dddaaeec                  0x55"
+      actual   (nonprintable as hex) : "                      0x5573dddaaee8                      0x5573dddaaee9                      0x5573dddaaeea                      0x5573dddaaeec      "
+
+Test 185 (p_width_fit_lj) : FAILED.
+    First line of code: {return test("%-70p%-70p%-70p%-70p%-70p%-70p%-70p%-70p%-70p%-70p%-70p%-70p",&a01,&a02,&a03,&a04,&a05,&a06,&a07,&a08,&a09,&a10      expected output : "0x5573dddaaee8                                                        0x5573dddaaee9                                                        0x5573ddda"
+      your output     : "0x5573dddaaee8                                                            0x5573dddaaee9                                                            0x"
+      expected (nonprintable as hex) : "0x5573dddaaee8                                                        0x5573dddaaee9                                                        0x5573ddda"
+      actual   (nonprintable as hex) : "0x5573dddaaee8                                                            0x5573dddaaee9                                                            0x"
+
+Test 187 (p_width_16_lj) : FAILED.
+    First line of code: {return test("%-16p%-16p%-16p%-16p%-16p%-16p%-16p%-16p%-16p%-16p%-16p%-16p",&a01,&a02,&a03,&a04,&a05,&a06,&a07,&a08,&a09,&a10      expected output : "0x5573dddaaee8  0x5573dddaaee9  0x5573dddaaeea  0x5573dddaaeec  0x5573dddaaef0  0x5573dddaaef4  0x5573dddaaef8  0x5573dddaaf00  0x5573dddaaf08  0x5573"
+      your output     : "0x5573dddaaee8      0x5573dddaaee9      0x5573dddaaeea      0x5573dddaaeec      0x5573dddaaef0      0x5573dddaaef4      0x5573dddaaef8      0x5573ddda"
+      expected (nonprintable as hex) : "0x5573dddaaee8  0x5573dddaaee9  0x5573dddaaeea  0x5573dddaaeec  0x5573dddaaef0  0x5573dddaaef4  0x5573dddaaef8  0x5573dddaaf00  0x5573dddaaf08  0x5573"
+      actual   (nonprintable as hex) : "0x5573dddaaee8      0x5573dddaaee9      0x5573dddaaeea      0x5573dddaaeec      0x5573dddaaef0      0x5573dddaaef4      0x5573dddaaef8      0x5573ddda"
+
+Test 189 (p_width_32_lj) : FAILED.
+    First line of code: {return test("%-32p%-32p%-32p%-32p%-32p%-32p%-32p%-32p%-32p%-32p%-32p%-32p",&a01,&a02,&a03,&a04,&a05,&a06,&a07,&a08,&a09,&a10      expected output : "0x5573dddaaee8                  0x5573dddaaee9                  0x5573dddaaeea                  0x5573dddaaeec                  0x5573dddaaef0        "
+      your output     : "0x5573dddaaee8                      0x5573dddaaee9                      0x5573dddaaeea                      0x5573dddaaeec                      0x5573"
+      expected (nonprintable as hex) : "0x5573dddaaee8                  0x5573dddaaee9                  0x5573dddaaeea                  0x5573dddaaeec                  0x5573dddaaef0        "
+      actual   (nonprintable as hex) : "0x5573dddaaee8                      0x5573dddaaee9                      0x5573dddaaeea                      0x5573dddaaeec                      0x5573"
+
+Test 379 (u_prec_width_ff_zero_ljzp_ignoreflag) : FAILED.
+    First line of code: {return test("%0-8.5u", 0);}
+    Timed out
+
